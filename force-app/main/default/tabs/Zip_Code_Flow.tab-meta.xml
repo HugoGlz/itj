@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <frameHeight>600</frameHeight>
+    <hasSidebar>true</hasSidebar>
+    <label>Zip Code - Flow</label>
+    <motif>Custom72: Helicopter</motif>
+    <url>/flow/Zip_Code_Screen/301Hp000001WyUAIA0</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

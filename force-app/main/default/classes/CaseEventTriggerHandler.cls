@@ -1,6 +1,5 @@
 public with sharing class CaseEventTriggerHandler {
     
-    
     public static void onAfterInsert(List<CaseEvent__e> events) {
 
         try{

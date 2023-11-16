@@ -1,0 +1,18 @@
+<template>
+   <lightning-combobox 
+      name="Country" 
+      label="Country" 
+      value={countryCode} 
+      options={countryCodeOptions} 
+      onchange={handleChangeCountryCode}>
+  </lightning-combobox>
+
+   <lightning-input label="Zip Code" onchange={handleChangeZipCode} value={zipCode}></lightning-input>
+   <br />
+   <lightning-button variant="brand" label="Search" onclick={handleSearchButton}></lightning-button>
+
+   <template lwc:if={childData}>
+      <c-zip-code-child info={childData}></c-zip-code-child>
+    </template>
+    
+</template>

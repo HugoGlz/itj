@@ -1,0 +1,57 @@
+<template>
+    <template lwc:if={data}>
+      <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:address">
+        <lightning-layout multiple-rows style="background-color: white;" >
+          <lightning-layout-item size="12" flexibility="auto" padding="horizontal-small">
+            <lightning-layout multiple-rows >
+              <lightning-layout-item size="4" flexibility="auto" padding="horizontal-small">
+                <lightning-input type="text" label="Post Code" value={data.post_code} read-only="true"></lightning-input>
+              </lightning-layout-item>
+              <lightning-layout-item size="4" flexibility="auto" padding="horizontal-small">
+                <lightning-input type="text" label="Country" value={data.country} read-only="true"></lightning-input>
+              </lightning-layout-item>
+              <lightning-layout-item size="4" flexibility="auto" padding="horizontal-small">
+                <lightning-input type="text" label="Country Abbreviation" value={data.country_abbreviation} read-only="true"></lightning-input>
+              </lightning-layout-item>
+            </lightning-layout>
+          </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout multiple-rows style="background-color: white;" >
+          <lightning-layout-item size="12" flexibility="auto" padding="horizontal-small">
+            <lightning-layout multiple-rows >
+              <lightning-layout-item size="4" flexibility="auto" padding="horizontal-small">
+                <strong>Places</strong>
+              </lightning-layout-item>
+            </lightning-layout>
+          </lightning-layout-item>
+        </lightning-layout>
+
+        <template for:each={data.places} for:item="place">
+          <lightning-layout multiple-rows style="background-color: white;" key={place.longitude} >
+            <lightning-layout-item size="12" flexibility="auto" padding="horizontal-small">
+              <lightning-layout multiple-rows >
+                <lightning-layout-item size="4" flexibility="auto" padding="horizontal-small">
+                  <lightning-input type="text" label="Place Name" value={place.place_name} read-only="true"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="4" flexibility="auto" padding="horizontal-small">
+                  <lightning-input type="text" label="State" value={place.state} read-only="true"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="4" flexibility="auto" padding="horizontal-small">
+                  <lightning-input type="text" label="State Abbreviation" value={place.state_abbreviation} read-only="true"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="4" flexibility="auto" padding="horizontal-small">
+                  <lightning-input type="text" label="Longitude" value={place.longitude} read-only="true"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="4" flexibility="auto" padding="horizontal-small">
+                  <lightning-input type="text" label="Latitude" value={place.latitude} read-only="true"></lightning-input>
+                </lightning-layout-item>
+              </lightning-layout>
+            </lightning-layout-item>
+          </lightning-layout>
+        </template>
+
+      </lightning-card>
+    </template>
+    
+</template>
